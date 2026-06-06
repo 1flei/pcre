@@ -1,0 +1,28 @@
+[project]
+name = "pc-re"
+version = "0.0.1"
+description = "Compile-time regex engine for PythoC — parse, compile, and run regex patterns as native code"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pythoc",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pcre*"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
