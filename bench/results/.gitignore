@@ -1,0 +1,3 @@
+# pcre benchmark results
+*.json
+!README.md

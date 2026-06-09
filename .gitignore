@@ -8,3 +8,20 @@ backup
 *.egg-info
 dist/
 .coverage
+
+# Benchmark data (large, generated)
+bench/datasets/data/
+
+# Benchmark results
+bench/results/*.json
+
+# Rust build artifacts
+bench/shims/rust_regex_bench/target/
+bench/shims/rust_regex_bench/vendor/
+bench/shims/bin/
+
+# re2c build artifacts (generated per pattern)
+bench/_build_re2c/
+
+# pcre-native build artifacts (generated per pattern)
+bench/_build_pcre_native/
